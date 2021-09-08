@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="71" height="64" viewBox="0 0 71 64">
+    <defs>
+        <filter id="mcgwizl7va" width="607.8%" height="1407.6%" x="-253.9%" y="-326.9%" filterUnits="objectBoundingBox">
+            <feOffset dy="25" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="12.5"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.938534297 0 0 0 0 0.946537302 0 0 0 0 0.954540308 0 0 0 1 0"/>
+        </filter>
+        <filter id="l3gl3el7mc" width="576.2%" height="896.6%" x="-238.1%" y="-199.2%" filterUnits="objectBoundingBox">
+            <feOffset dy="25" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="12.5"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.938534297 0 0 0 0 0.946537302 0 0 0 0 0.954540308 0 0 0 1 0"/>
+        </filter>
+        <path id="tau4xl3grb" d="M9.45 7.28c.607.49 1.493.49 2.1 0L20.347.117C20.183.047 20.02 0 19.833 0H1.167C.98 0 .817.047.653.117L9.45 7.28z"/>
+        <path id="zkrwovywkd" d="M12.46 8.4c-.56.467-1.26.7-1.96.7s-1.4-.233-1.96-.7L0 1.447v11.386C0 13.487.513 14 1.167 14h18.666c.654 0 1.167-.513 1.167-1.167V1.447L12.46 8.4z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g>
+                    <g transform="translate(-1581.000000, -17.000000) translate(1606.000000, 10.000000) translate(0.000000, 7.000000)">
+                        <use fill="#000" filter="url(#mcgwizl7va)" xlink:href="#tau4xl3grb"/>
+                        <use fill="#FFF" xlink:href="#tau4xl3grb"/>
+                    </g>
+                    <g transform="translate(-1581.000000, -17.000000) translate(1606.000000, 10.000000) translate(0.000000, 7.000000)">
+                        <use fill="#000" filter="url(#l3gl3el7mc)" xlink:href="#zkrwovywkd"/>
+                        <use fill="#FFF" xlink:href="#zkrwovywkd"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

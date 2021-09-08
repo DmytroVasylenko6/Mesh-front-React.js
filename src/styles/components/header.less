@@ -1,0 +1,82 @@
+.site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  height: 50px;
+  width: 100%;
+  background-color: @background-component-second;
+  // overflow: hidden;
+
+  .container {
+    position: relative;
+    z-index: 10;
+    background-color: @background-component-second;
+  }
+
+  &__logo-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-left: 15px;
+
+    .logo-link {
+      font-family: 'Proxima Nova';
+      font-size: 33px;
+      font-weight: 900;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      display: flex;
+      align-items: center;
+      color: #fff;
+    }
+  }
+
+  &__user-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (min-width: @screen-xl-min) {
+      justify-content: flex-end;
+    }
+  }
+
+  .notification-button {
+    background: none;
+    border: 0;
+    position: relative;
+    height: 80px;
+    width: 80px;
+    cursor: pointer;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 30px;
+      left: 0;
+      height: 80px;
+      width: 80px;
+      background-image: url('../../../../images/svg/notification.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+
+    .active-notification {
+      position: absolute;
+      top: 28px;
+      right: 21px;
+      height: 7px;
+      width: 7px;
+      border-radius: 50%;
+      background: #fff;
+    }
+  }
+}

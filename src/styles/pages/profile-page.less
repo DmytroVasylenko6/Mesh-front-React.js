@@ -1,0 +1,23 @@
+.profile-page {
+  padding-top: 50px;
+
+  &__container {
+    padding-top: 35px;
+    display: flex;
+  }
+
+  .profile-content {
+    // padding-top: 100px;
+    padding-left: 50px;
+  }
+
+  @media screen and (max-width: @screen-md-min) {
+    .sidebar {
+      display: none;
+    }
+
+    .profile-content {
+      padding-left: unset;
+    }
+  }
+}

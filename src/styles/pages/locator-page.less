@@ -1,0 +1,142 @@
+.locator {
+  padding-top: 50px;
+
+  &__container {
+    padding-top: 35px;
+    display: flex;
+  }
+
+  &__search-container {
+    flex-shrink: 0;
+  }
+
+  &__content {
+    display: flex;
+    padding-left: 50px;
+    max-height: 690px;
+
+    .search-title,
+    .forum-title {
+      margin-bottom: 30px;
+      font-size: 42px;
+      font-weight: 300;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.07;
+      letter-spacing: -1px;
+    }
+
+    .search {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 10px;
+      max-width: 270px;
+      border-radius: 8px;
+      background-color: #fff;
+
+      &__description {
+        margin-top: 15px;
+        margin-bottom: 8px;
+        padding-left: 15px;
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #6d7278;
+      }
+    }
+  }
+
+  &__forum-container {
+    padding-left: 50px;
+    max-width: 650px;
+    width: 100%;
+    flex-shrink: 1;
+
+    .forum {
+      border-radius: 8px;
+      background-color: #fff;
+
+      @media screen and (min-width: @screen-lg-min) {
+        padding: 25px;
+      }
+    }
+  }
+
+  &__history-container {
+    width: 100%;
+  }
+
+  @media screen and (max-width: @screen-lg-min) {
+    &__history-container {
+      margin-top: 20px;
+    }
+
+    .history-partners__title {
+      text-align: left;
+    }
+
+    &__content {
+      max-height: unset;
+    }
+
+    &--partner &__content {
+      padding-left: 0;
+      flex-wrap: wrap;
+    }
+
+    &--consultant &__content {
+      padding-left: 20px;
+    }
+
+    &__forum-container {
+      width: calc(100% - 270px);
+      flex: 1 1 auto;
+    }
+
+    &--partner .sidebar {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: @screen-md-min) {
+    &__search-container {
+      width: 100%;
+    }
+
+    &__forum-container {
+      width: 100%;
+      max-width: unset;
+      margin-top: 20px;
+      padding-left: 0;
+    }
+
+    &__content {
+      .search {
+        max-width: unset;
+      }
+    }
+  }
+
+  @media screen and (max-width: @screen-sm-min) {
+    &__content {
+      .search-title,
+      .forum-title,
+      .history-partners__title {
+        font-size: 27px;
+        font-weight: normal;
+      }
+    }
+
+    &--consultant &__content {
+      padding-left: unset;
+      flex-wrap: wrap;
+    }
+
+    &--consultant .sidebar {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,211 @@
+.homepage {
+  overflow-x: hidden;
+  padding-top: 50px;
+  background-image: linear-gradient(338deg, #e1e1e1 108%, #f8f9fa 1%);
+
+  @media screen and (min-width: @screen-xl-min) {
+    height: 100vh;
+    background-image: none;
+  }
+
+  &__container {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+
+    @media screen and (min-width: @screen-xl-min) {
+      flex-direction: row;
+    }
+  }
+
+  &__left-box,
+  &__right-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: 50%;
+    height: 100%;
+    align-items: center;
+  }
+
+  &__left-box {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    @media screen and (min-width: @screen-xl-min) {
+      padding: 0;
+    }
+  }
+
+  &__right-box {
+    padding-bottom: 16px;
+
+    @media screen and (min-width: @screen-xl-min) {
+      max-width: 476px;
+      padding-left: 50px;
+      padding-bottom: unset;
+    }
+
+    .title {
+      font-size: 33px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.18;
+      letter-spacing: -0.79px;
+      color: @text-color;
+
+      @media screen and (max-width: @screen-xs-max) {
+        font-size: 27px;
+        letter-spacing: -0.64px;
+        line-height: normal;
+      }
+    }
+
+    .description,
+    .bottom-text {
+      font-size: 16px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      //color: @text-color-opacity;
+      color: #0a2439;
+
+      @media screen and (max-width: @screen-xs-max) {
+        font-size: 15px;
+      }
+    }
+
+    .sign-in-link {
+      font-weight: 900;
+      margin-left: 5px;
+      color: @text-color;
+      text-decoration: underline;
+    }
+
+    .profile-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 5px !important;
+      padding: 5px 20px;
+      font-size: 14px;
+      width: 100%;
+      height: 50px;
+      //   font-weight: 900;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: center;
+    }
+
+    .register-buttons {
+      width: 100%;
+      @media screen and (min-width: @screen-xl-min) {
+        flex: unset;
+        width: unset;
+      }
+    }
+
+    .link-button {
+      min-height: 50px;
+      white-space: unset;
+      padding-top: 5px !important;
+      padding: 5px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @media screen and (max-width: @screen-lg-max) {
+        width: 100%;
+      }
+
+      @media screen and (min-width: @screen-xl-min) {
+        max-width: 150px;
+      }
+    }
+
+    .bottom-text {
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+    .button-container {
+      position: relative;
+      padding-top: 40px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 1px;
+        width: 100%;
+        background-color: #ffffff;
+      }
+    }
+  }
+
+  &__logo-container {
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media screen and (min-width: @screen-xl-min) {
+      max-width: 470px;
+    }
+
+    @media screen and (min-width: @screen-xxl-min) {
+      max-width: 570px;
+    }
+  }
+
+  &__logo {
+    object-fit: contain;
+    height: auto;
+  }
+
+  &__logo-text {
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: oblique;
+    line-height: 1.67;
+    letter-spacing: 6.7px;
+    white-space: nowrap;
+
+    @media screen and (max-width: @screen-xs-max) {
+      display: none;
+    }
+
+    @media screen and (min-width: @screen-xl-min) {
+      font-size: 20px;
+    }
+
+    @media screen and (min-width: @screen-xxl-min) {
+      font-size: 27px;
+    }
+  }
+
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background-image: linear-gradient(324deg, #e1e1e1 102%, #f8f9fa 1%);
+  }
+}

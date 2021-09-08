@@ -1,0 +1,57 @@
+.profile-form {
+  max-width: 910px;
+  margin: 0 auto;
+  overflow: hidden;
+
+  &__description {
+    margin: 0;
+    font-size: 42px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.07;
+    letter-spacing: -1px;
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__input {
+    height: 50px;
+    width: 100%;
+    // margin-bottom: 20px;
+  }
+
+  input[data-error='true'] {
+    border-color: rgba(255, 0, 0, 0.401);
+  }
+
+  &__error {
+    position: absolute;
+    top: 95%;
+    left: 20px;
+    font-size: 12px;
+    color: rgba(255, 0, 0, 0.601);
+  }
+
+  &__button {
+    width: 100%;
+    height: 50px;
+  }
+
+  @media screen and (max-width: @screen-lg-min) {
+    padding: 0 2px;
+  }
+
+    @media screen and (max-width: @screen-md-min) {
+    &__description {
+      font-size: 27px;
+      font-weight: normal;
+    }
+
+    .ant-upload.ant-upload-select-picture-card {
+      margin-right: 0;
+    }
+  }
+}

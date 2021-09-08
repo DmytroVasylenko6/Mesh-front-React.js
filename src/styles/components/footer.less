@@ -1,0 +1,79 @@
+.site-footer-homepage {
+  width: 100%;
+  padding: 25px 0;
+
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+
+  @media screen and (min-width: @screen-xl-min) {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+.site-footer-other-page {
+  width: 100%;
+  //background-color: #f8f9fa;
+  background-color: transparent;
+
+  //@media screen and (min-width: @screen-xl-min) {
+  //  position: absolute;
+  //  left: 0;
+  //  bottom: 0;
+  //}
+
+  .loader-overlay + & {
+    opacity: 0;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding-top: 25px;
+    padding-bottom: 30px;
+
+    @media screen and (min-width: @screen-xl-min) {
+      flex-direction: column;
+    }
+  }
+  &__logo {
+    font-family: 'Proxima Nova';
+    font-size: 56px;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: rgba(120, 120, 128, 0.2);
+  }
+
+  &__page-links {
+    margin-top: 5px;
+    font-size: 12px;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+
+    @media screen and (min-width: @screen-xl-min) {
+      display: none;
+    }
+  }
+
+  &__text {
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #0a2439;
+  }
+}

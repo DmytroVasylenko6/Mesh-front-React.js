@@ -1,0 +1,146 @@
+.billing-form {
+  &__title {
+    font-size: 42px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.07;
+    letter-spacing: -1px;
+  }
+
+  &__input {
+    height: 50px;
+    font-size: 14px;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+
+    &:focus {
+      font-weight: normal;
+    }
+  }
+
+  input[data-error='true'] {
+    border-color: rgba(255, 0, 0, 0.401);
+  }
+
+  &__error {
+    position: absolute;
+    top: 95%;
+    left: 20px;
+    font-size: 12px;
+    color: rgba(255, 0, 0, 0.601);
+  }
+
+  &__button {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 270px;
+
+    .button-text {
+      white-space: pre-wrap;
+      margin: 0;
+
+      &--left {
+        max-width: 70px;
+        font-size: 12px;
+        font-weight: 900;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: left;
+      }
+
+      &--right {
+        max-width: 125px;
+        font-size: 10px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: right;
+      }
+    }
+  }
+
+  &__line {
+    position: relative;
+    display: block;
+    padding: 25px 0;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: rgba(108, 108, 108, 0.1);
+    }
+  }
+
+  &__checkbox-container {
+    display: flex;
+    margin-top: 20px;
+    padding: 12px 15px;
+    align-items: center;
+    border-radius: 8px;
+    background-image: url("data:image/svg+xml;utf8,<svg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill: none; stroke: rgba(0, 0, 0, 0.2); stroke-width: 4; stroke-dasharray: 7 7'/></svg>");
+  }
+
+  &__checkbox {
+    .ant-checkbox-inner {
+      border-radius: 5px;
+      width: 22px;
+      height: 22px;
+      &:after {
+        left: 27%;
+      }
+    }
+  }
+
+  &__checkbox-description {
+    margin-left: 15px;
+    margin-right: 20px;
+    margin-bottom: 0;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #696d6f;
+  }
+
+  @media screen and (max-width: @screen-sm-min) {
+    &__title {
+      font-size: 27px;
+    }
+
+    &__line {
+      padding: 10px 0;
+      opacity: 0;
+    }
+
+    &__checkbox-container {
+      flex-wrap: wrap;
+    }
+
+    &__checkbox-description {
+      width: calc(100% - 25px);
+      margin-left: unset;
+      margin-right: unset;
+      padding-left: 15px;
+    }
+
+    &__button {
+      max-width: unset;
+      margin-top: 20px;
+    }
+  }
+}

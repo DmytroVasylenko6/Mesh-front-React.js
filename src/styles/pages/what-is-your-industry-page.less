@@ -1,0 +1,60 @@
+.what-is-industry-page {
+  padding-top: 50px;
+
+  .first-step-container {
+    padding-top: 200px;
+    max-width: 270px;
+    margin: 0 auto;
+
+    .step-box {
+      display: flex;
+      max-width: 115px;
+      margin: 0 auto;
+      margin-bottom: 50px;
+
+      .step-box__step-1 {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: @primary-color;
+      }
+      .step-box__line {
+        position: relative;
+        width: 75px;
+
+        &::after {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+          content: '';
+          width: 100%;
+          height: 1px;
+          background-color: #c3c3c6;
+        }
+      }
+      .step-box__step-2 {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: solid 1px #c3c3c6;
+      }
+    }
+
+    .first-step-container__button {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 50px;
+    }
+  }
+
+  @media screen and (max-width: @screen-lg-min) {
+    .first-step-container {
+      padding-top: 45px;
+      max-width: unset;
+    }
+  }
+}

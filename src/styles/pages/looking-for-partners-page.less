@@ -1,0 +1,118 @@
+.looking-for-partners-page {
+  padding-top: 50px;
+
+  .second-step-container {
+    padding-top: 200px;
+    max-width: 270px;
+    margin: 0 auto;
+
+    .step-box {
+      display: flex;
+      max-width: 115px;
+      margin: 0 auto;
+      margin-bottom: 50px;
+
+      .step-box__step-1 {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: @primary-color;
+      }
+      .step-box__line {
+        position: relative;
+        width: 75px;
+
+        &::after {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+          content: '';
+          width: 100%;
+          height: 1px;
+          background-color: @primary-color;
+        }
+      }
+      .step-box__step-2 {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: @primary-color;
+      }
+    }
+
+    .second-step-container__description {
+      font-size: 14px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: center;
+      color: @text-color-opacity;
+    }
+
+    .second-step-container__button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 30px;
+      font-size: 14px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #0a2439;
+
+      &.is-selected {
+        border: 1px solid @primary-color;
+      }
+    }
+
+    .buttons-container {
+      display: flex;
+      justify-content: space-between;
+
+      max-width: 360px;
+      margin: 0 auto;
+
+      .second-step-container__button {
+        max-width: calc(50% - 15px);
+      }
+    }
+
+    .second-step-container__button-next {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 50px;
+      font-size: 14px;
+      font-weight: 900;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: center;
+    }
+  }
+
+  @media screen and (max-width: @screen-lg-min) {
+    .second-step-container {
+      padding-top: 45px;
+      max-width: unset;
+
+      .buttons-container {
+        .second-step-container__button {
+          height: 50px;
+        }
+      }
+
+      .second-step-container__description {
+        color: #0a2439;
+      }
+    }
+  }
+}

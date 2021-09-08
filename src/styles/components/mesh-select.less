@@ -1,0 +1,129 @@
+.mesh-select-wrapper {
+  position: relative;
+}
+
+.mesh-select {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  
+  font-size: 14px;
+  color: #0a2439;
+  
+  background-color: #fff;
+  border-radius: @border-radius-base;
+  border: 1px solid #d9d9d9;
+  transition: all .15s;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: calc(50% - 4px);
+    right: 10px;
+
+    width: 0;
+    height: 0;
+
+    border-style: solid;
+    border-width: 7px 4px 0 4px;
+    border-color: #000000 transparent transparent transparent;
+    transition: opacity .2s;
+  }
+
+  &.is-opened {
+    border-bottom-left-radius: unset;
+    border-bottom-right-radius: unset;
+  }
+
+  &-placeholder {
+    padding-right: 10px;
+  }
+
+  &-selected {
+    padding: 0 1.91em;
+
+    font-size: 12px;
+    line-height: 1.91em;
+    color: #ffffff;
+    text-align: center;
+
+    border-radius: 10px;
+    background-color: rgba(120, 120, 128, 0.36);
+  }
+
+  &-dropdown {
+    box-shadow: unset;
+    border-top-left-radius: unset;
+    border-top-right-radius: unset;
+    border-left: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+    border-right: 1px solid #d9d9d9;
+
+    .ant-select-item-option-content {
+      flex-grow: 0;
+      width: fit-content;
+      padding: 0 1.91em;
+
+      font-size: 12px;
+      line-height: 1.91em;
+      color: #ffffff;
+      text-align: center;
+
+      border-radius: 10px;
+      background-color: rgba(120, 120, 128, 0.36);
+    }
+
+    .ant-select-item {
+      display: flex;
+      padding-right: 1.91em;
+      justify-content: flex-end;
+
+      background-color: #ffffff;
+
+      &--separated {
+        .ant-select-item-option-content {
+          max-width: 150px;
+
+          input {
+            padding-left: 0;
+            padding-right: 0;
+            
+            font-size: 12px;
+            color: #fff;
+            text-align: center;
+
+            &::placeholder {
+              color: #fff;
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+
+    .ant-select-item-option-selected {
+      .ant-select-item-option-content {
+        background-color: @primary-color;
+      }
+    }
+  }
+
+  & + .ant-select {
+    position: absolute;
+    bottom: 2px;
+    z-index: 1;
+
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+
+    .ant-select-selector,
+    .ant-select-selection-item,
+    .ant-select-selection-overflow,
+    .ant-select-selection-overflow-item,
+    .ant-select-selection-search-input {
+      cursor: pointer;
+    }
+  }
+}
